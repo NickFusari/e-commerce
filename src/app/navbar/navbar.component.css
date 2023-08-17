@@ -1,0 +1,33 @@
+.navbar, .container{
+
+    background: var(--dark);
+    height: 7vh;
+}
+
+span{
+
+    vertical-align: middle;
+}
+
+.container{
+
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--orange);
+}
+
+.container>div>a{
+
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.container>div>a:hover{
+
+    color: var(--orange);
+}

@@ -1,0 +1,29 @@
+.outer{
+
+    background: var(--dark);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.logoHolder>a>img{
+
+    width: 20px;
+    margin: 0 1rem;
+}
+
+.container>p{
+
+    margin-top: 0.5rem;
+    color: var(--faded);
+}
