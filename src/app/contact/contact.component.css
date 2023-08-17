@@ -1,0 +1,54 @@
+.container{
+
+    max-width: 1300px;
+    margin: 5rem auto;
+    display: flex;
+}
+
+.container>img{
+
+    width: 650px;
+    border-radius: 90px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.contactInfo{
+
+    margin-left: 2rem;
+    background: var(--faded);
+    width: 100%;
+    padding: 3rem;
+    border-radius: 90px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contactInfo h2{
+
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contactInfo p{
+
+    margin-bottom: 1rem;
+}
+
+.details{
+
+    margin: 4rem 0;
+}
+
+.googleMap {
+        padding-bottom: 50%;
+        position: relative;
+}
+
+.googleMap iframe {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+}
