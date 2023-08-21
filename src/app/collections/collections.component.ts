@@ -8,8 +8,7 @@ import { CommerceService } from '../commerce.service';
 })
 export class CollectionsComponent {
 
-  constructor(private service: CommerceService){
-
-    this.service.getProducts();
+  
+  constructor(public service: CommerceService){
   }
 }
