@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class CommerceService {
 
-  constructor() { }
+  
+
+  constructor(private http: HttpClient) { 
+
+  }
+
+  getProducts(){
+
+    this.http.get('https://dummyjson.com/products?limit=100').subscribe((data) => console.log(data));
+  }
 }
