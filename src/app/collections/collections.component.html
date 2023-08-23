@@ -1,20 +1,132 @@
-<div class="container">
-    <div class="imgHolder">
-        <img src="../../assets/egg.jpg" alt="eyes">
-    </div>
-    <h2>Gadgets:</h2>
-    <div class="productHolderCollections">
-        <div class="productCollections" *ngFor="let x of this.service.gadgets">
-            <img src={{x.thumbnail}} alt={{x.title}}>
-            <div class="fadedInformation">
-                <h2>{{x.title}}</h2>
-                <p class="money">{{x.price}} EUR</p>
-                <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
-            </div>    
+<div>
+    <div class="colored">
+        <div class="container">
+            <div class="imgHolder">
+                <img src="../../assets/carrot.jpg" alt="eyes">
+            </div>
         </div>
-        <div class="transfer">
-            <p>Show more</p>
-            <mat-icon>double_arrow</mat-icon>
+    </div>
+    <div class="container">
+        <h2>Gadgets:</h2>
+        <div class="productHolderCollections">
+            <div class="productCollections" *ngFor="let x of this.service.gadgets">
+                <img src={{x.thumbnail}} alt={{x.title}}>
+                <div class="fadedInformation">
+                    <h2>{{x.title}}</h2>
+                    <p class="money">{{x.price}} EUR</p>
+                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                </div>    
+            </div>
+            <div class="transfer">
+                <p>Show more</p>
+                <mat-icon>double_arrow</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Beauty:</h2>
+        <div class="productHolderCollections">
+            <div class="productCollections" *ngFor="let x of this.service.beauty">
+                <img src={{x.thumbnail}} alt={{x.title}}>
+                <div class="fadedInformation">
+                    <h2>{{x.title}}</h2>
+                    <p class="money">{{x.price}} EUR</p>
+                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                </div>    
+            </div>
+            <div class="transfer">
+                <p>Show more</p>
+                <mat-icon>double_arrow</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="colored">
+        <div class="containerSec">
+            <h2>Groceries:</h2>
+            <div class="productHolderCollections">
+                <div class="productCollections" *ngFor="let x of this.service.groceries">
+                    <img src={{x.thumbnail}} alt={{x.title}}>
+                    <div class="fadedInformation">
+                        <h2>{{x.title}}</h2>
+                        <p class="money">{{x.price}} EUR</p>
+                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                    </div>    
+                </div>
+                <div class="transfer">
+                    <p>Show more</p>
+                    <mat-icon>double_arrow</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Home Decorations:</h2>
+        <div class="productHolderCollections">
+            <div class="productCollections" *ngFor="let x of this.service.homedeco">
+                <img src={{x.thumbnail}} alt={{x.title}}>
+                <div class="fadedInformation">
+                    <h2>{{x.title}}</h2>
+                    <p class="money">{{x.price}} EUR</p>
+                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                </div>    
+            </div>
+            <div class="transfer">
+                <p>Show more</p>
+                <mat-icon>double_arrow</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Women's wear:</h2>
+        <div class="productHolderCollections">
+            <div class="productCollections" *ngFor="let x of this.service.womens">
+                <img src={{x.thumbnail}} alt={{x.title}}>
+                <div class="fadedInformation">
+                    <h2>{{x.title}}</h2>
+                    <p class="money">{{x.price}} EUR</p>
+                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                </div>    
+            </div>
+            <div class="transfer">
+                <p>Show more</p>
+                <mat-icon>double_arrow</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="colored">
+        <div class="containerSec">
+            <h2>Men's Wear:</h2>
+            <div class="productHolderCollections">
+                <div class="productCollections" *ngFor="let x of this.service.mens">
+                    <img src={{x.thumbnail}} alt={{x.title}}>
+                    <div class="fadedInformation">
+                        <h2>{{x.title}}</h2>
+                        <p class="money">{{x.price}} EUR</p>
+                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                    </div>    
+                </div>
+                <div class="transfer">
+                    <p>Show more</p>
+                    <mat-icon>double_arrow</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Sunglasses:</h2>
+        <div class="productHolderCollections">
+            <div class="productCollections" *ngFor="let x of this.service.sunglasses">
+                <img src={{x.thumbnail}} alt={{x.title}}>
+                <div class="fadedInformation">
+                    <h2>{{x.title}}</h2>
+                    <p class="money">{{x.price}} EUR</p>
+                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                </div>    
+            </div>
+            <div class="transfer">
+                <p>Show more</p>
+                <mat-icon>double_arrow</mat-icon>
+            </div>
         </div>
     </div>
 </div>

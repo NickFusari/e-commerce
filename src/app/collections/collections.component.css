@@ -1,13 +1,27 @@
-.container{
+.colored{
 
-    max-width: 1300px;
-    margin: 3rem auto;
+    background: var(--faded);
+    padding: 2rem 0;
 }
 
-.container>h2{
+.container, .containerSec{
+
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.container{
+
+    padding: 3rem 0;
+}
+
+.container>h2, .containerSec>h2{
 
     font-size: 2rem;
     margin: 3rem 0;
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+    text-decoration-thickness: 5px;
 }
 
 .productHolderCollections{

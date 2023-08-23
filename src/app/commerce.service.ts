@@ -15,7 +15,6 @@ export class CommerceService {
   womens:  Array<Product> = new Array<Product>;
   mens:  Array<Product> = new Array<Product>;
   sunglasses:  Array<Product> = new Array<Product>;
-  vehicle:  Array<Product> = new Array<Product>;
 
   constructor(private http: HttpClient) { 
 
@@ -38,8 +37,6 @@ export class CommerceService {
         }else if(prod.category == "mens-shirts" || prod.category == "mens-shoes" || prod.category == "mens-watches"){
           this.mens.push(prod);
         }else if(prod.category == "sunglasses"){
-          this.sunglasses.push(prod);
-        }else if(prod.category == "automotive" || prod.category == "motorcycle"){
           this.sunglasses.push(prod);
         }
       })
