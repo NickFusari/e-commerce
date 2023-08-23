@@ -1,6 +1,21 @@
-<div    *ngFor="let x of this.service.products">
-    <div *ngIf="">
-
+<div class="container">
+    <div class="imgHolder">
+        <img src="../../assets/egg.jpg" alt="eyes">
     </div>
-    <h2>{{x.title}}</h2>
+    <h2>Gadgets:</h2>
+    <div class="productHolderCollections">
+        <div class="productCollections" *ngFor="let x of this.service.gadgets">
+            <img src={{x.thumbnail}} alt={{x.title}}>
+            <div class="fadedInformation">
+                <h2>{{x.title}}</h2>
+                <p class="money">{{x.price}} EUR</p>
+                <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+            </div>    
+        </div>
+        <div class="transfer">
+            <p>Show more</p>
+            <mat-icon>double_arrow</mat-icon>
+        </div>
+    </div>
 </div>
+

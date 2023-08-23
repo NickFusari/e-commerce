@@ -4,24 +4,6 @@
     margin: 3rem auto;
 }
 
-.imgHolder{
-
-    max-width: 1300px;
-    height: 200px;
-    overflow: hidden;
-    background: #d77a1a;
-    margin-bottom: 2rem;
-    border-radius: 90px;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-img{
-
-    max-width: 1300px;
-    transform: translateY(-260px);
-}
-
 h2{
 
     margin-bottom: 2rem;

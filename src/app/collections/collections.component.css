@@ -1,0 +1,113 @@
+.container{
+
+    max-width: 1300px;
+    margin: 3rem auto;
+}
+
+.container>h2{
+
+    font-size: 2rem;
+    margin: 3rem 0;
+}
+
+.productHolderCollections{
+    
+    display: flex;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.productCollections{
+
+    min-width: 300px;
+    height: 300px;
+    margin: 0 1rem;
+    position: relative;
+    border-radius: 40px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.productCollections>img{
+
+    width: 100%;
+}
+
+.productCollections:hover{
+
+    box-shadow:  8px 8px 11px 0px rgba(0,0,0,0.58);;
+}
+
+span{
+
+    vertical-align: middle;
+}
+
+.fadedInformation{
+
+    position: absolute;
+    bottom: 0;
+    height: 180px;
+    width: 100%;
+    padding: 2rem 2rem;
+    background: linear-gradient(0deg,var(--dark) 80%, rgba(0, 0, 0, 0));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.fadedInformation>h2{
+
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+}
+
+.money{
+
+    font-weight: 600;
+}
+
+mat-icon{
+
+    color: var(--orange);
+}
+
+.transfer{
+
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(-90deg, black 40%, rgba(0, 0, 0, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.transfer>p{
+
+    font-size: 1.5rem;
+    max-width: 50px;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.transfer>mat-icon{
+
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}

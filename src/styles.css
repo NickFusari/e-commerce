@@ -32,3 +32,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+  .imgHolder{
+
+    max-width: 1300px;
+    height: 200px;
+    overflow: hidden;
+    background: #d77a1a;
+    margin-bottom: 2rem;
+    border-radius: 90px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.imgHolder>img{
+
+    max-width: 1300px;
+    transform: translateY(-260px);
+}

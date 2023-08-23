@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommerceService } from '../commerce.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-collections',
@@ -8,7 +9,6 @@ import { CommerceService } from '../commerce.service';
 })
 export class CollectionsComponent {
 
-  
   constructor(public service: CommerceService){
   }
 }
