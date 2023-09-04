@@ -1,7 +1,13 @@
 .colored{
 
     background: var(--faded);
-    padding: 2rem 0;
+    padding: 2rem 0 1rem 0;
+}
+
+#intro{
+
+    display: inline;
+    margin-right: 2rem;
 }
 
 .container, .containerSec{
@@ -12,7 +18,7 @@
 
 .container{
 
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 .container>h2, .containerSec>h2{
@@ -30,9 +36,13 @@
     margin: 2rem 0;
     position: relative;
     overflow: hidden;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .productCollections{
@@ -46,7 +56,6 @@
     border-top-left-radius: 5px;
     overflow: hidden;
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .productCollections>img{
@@ -56,7 +65,7 @@
 
 .productCollections:hover{
 
-    box-shadow:  8px 8px 11px 0px rgba(0,0,0,0.58);;
+    box-shadow:  8px 8px 11px 0px rgba(0,0,0,0.58);
 }
 
 span{
@@ -83,6 +92,7 @@ span{
     color: var(--orange);
     text-decoration: underline;
     text-decoration-color: var(--orange);
+    cursor: pointer;
 }
 
 .money{
@@ -100,7 +110,7 @@ mat-icon{
     position: absolute;
     right: 0;
     height: 100%;
-    width: 180px;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,4 +134,9 @@ mat-icon{
     width: 50px;
     height: 50px;
     font-size: 50px;
+}
+
+.transfer:hover{
+
+    background: linear-gradient(-90deg, rgb(70, 70, 70) 40%, rgba(0, 0, 0, 0));
 }

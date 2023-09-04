@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowproductComponent } from './showproduct/showproduct.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     CollectionsComponent,
     ContactComponent,
     AboutComponent,
-    ProductsComponent
+    ProductsComponent,
+    ShowproductComponent
   ],
   imports: [
     BrowserModule,

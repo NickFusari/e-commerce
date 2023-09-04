@@ -1,0 +1,25 @@
+<div class="fullcontainer">
+    <div class="container">
+        <div class="titleHolder">
+            <h2>{{selectedProduct.title}}</h2>
+        </div>
+        <div class="devider">
+            <div class="carouselHolder">
+                <div class="carousel">
+                    <img src={{images[index]}} alt={{selectedProduct.title}}>
+                    <button (click)="this.nextImage()" id="next"><mat-icon>chevron_right</mat-icon></button>
+                    <button (click)="this.previousImage()" id="previous"><mat-icon>chevron_left</mat-icon></button>
+                </div>
+            </div>
+            <div class="info">
+                <p><span>Brand:</span> {{selectedProduct.brand}}</p>
+                <p><span>Rating:</span> {{selectedProduct.rating}}</p>
+                <p><span>Description:</span> {{selectedProduct.description}}</p>
+                <p><span>Price:</span> {{selectedProduct.price}}<mat-icon>attach_money</mat-icon></p>
+                <p><span>Quantity:</span></p>
+                <input type="number">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from './product';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class CommerceService {
   mens:  Array<Product> = new Array<Product>;
   sunglasses:  Array<Product> = new Array<Product>;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient, private router: Router) { 
 
     this.http.get('https://dummyjson.com/products?limit=100').subscribe((data) => {
       let tempData = JSON.parse(JSON.stringify(data));
@@ -41,5 +42,10 @@ export class CommerceService {
         }
       })
     });
+  }
+
+  openProduct(id: Product){
+
+    this.router.navigate(["product", id])
   }
 }
