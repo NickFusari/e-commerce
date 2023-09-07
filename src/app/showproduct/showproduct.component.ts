@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Product } from '../product';
+import { CommerceService } from '../commerce.service';
 
 @Component({
   selector: 'app-showproduct',
@@ -11,18 +13,22 @@ export class ShowproductComponent {
   selectedProduct: any = 0;
   images: Array<any> = new Array();
   index: number = 0;
+  fullPrice: number = 0;
+  selectedStock: number = 1;
 
-  constructor(private route: ActivatedRoute){
+  constructor(private route: ActivatedRoute, private service: CommerceService){
 
     this.route.params.subscribe(p => this.selectedProduct = p);
     this.images = this.selectedProduct.images.split(",");
+    this.fullPrice = this.selectedProduct.price;
   }
 
   ngOnInit(){
 
     console.log(this.selectedProduct);
-    console.log(this.images);
-    console.log(this.index);
+    console.log(this.selectedProduct.stock);
+    console.log(this.service.products);
+    this.selectOptions();
   }
 
   nextImage(){
@@ -41,5 +47,27 @@ export class ShowproductComponent {
     }else{
       this.index = this.images.length-1;
     }
+  }
+
+  selectOptions(){
+
+    let initialValue = parseInt(this.selectedProduct.stock);
+    let current = 1;
+
+    while(current != initialValue){
+
+      let option = document.createElement('option');
+      option.textContent = current.toString();
+      option.setAttribute("value", current.toString());
+
+      document.querySelector("#stockCount")?.appendChild(option);
+      current += 1;
+    }
+  }
+
+  getSelectedAndChangePrice(event: any){
+
+    this.selectedStock = parseInt(event.target.value);
+    this.fullPrice = this.selectedProduct.price * this.selectedStock;
   }
 }

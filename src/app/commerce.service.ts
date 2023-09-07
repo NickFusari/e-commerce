@@ -26,7 +26,6 @@ export class CommerceService {
       this.products.forEach(prod =>{
         if(prod.category == "smartphones" || prod.category == "laptops"){
           this.gadgets.push(prod);
-          console.log(this.gadgets);
         }else if(prod.category == "fragrances"){
           this.beauty.push(prod);
         }else if(prod.category == "groceries"){

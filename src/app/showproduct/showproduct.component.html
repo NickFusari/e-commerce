@@ -13,13 +13,23 @@
             </div>
             <div class="info">
                 <p><span>Brand:</span> {{selectedProduct.brand}}</p>
-                <p><span>Rating:</span> {{selectedProduct.rating}}</p>
+                <p><span>Rating:</span> {{selectedProduct.rating}}<mat-icon>star</mat-icon></p>
                 <p><span>Description:</span> {{selectedProduct.description}}</p>
-                <p><span>Price:</span> {{selectedProduct.price}}<mat-icon>attach_money</mat-icon></p>
+                <p id="price"><span>Price:</span> {{fullPrice}}<mat-icon id="money">attach_money</mat-icon></p>
                 <p><span>Quantity:</span></p>
-                <input type="number">
+                <select id="stockCount" (change)="getSelectedAndChangePrice($event)">
+                </select>
                 <button>Add to Cart</button>
             </div>
         </div>
+    </div>
+</div>
+<div class="container">
+    <div class="titleHolder">
+        <h2>Products you might also like:</h2>
+    </div>
+
+    <div class="otherProducts">
+        
     </div>
 </div>
