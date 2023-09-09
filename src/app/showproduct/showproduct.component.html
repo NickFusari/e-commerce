@@ -19,7 +19,7 @@
                 <p><span>Quantity:</span></p>
                 <select id="stockCount" (change)="getSelectedAndChangePrice($event)">
                 </select>
-                <button>Add to Cart</button>
+                <button id="addToCart">Add to Cart</button>
             </div>
         </div>
     </div>
@@ -30,6 +30,13 @@
     </div>
 
     <div class="otherProducts">
-        
+        <div class="productCollections" *ngFor="let x of this.service.products">
+            <img src={{x.thumbnail}} alt={{x.title}}>
+            <div class="fadedInformation">
+                <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                <p class="money">{{x.price}} EUR</p>
+                <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+            </div>    
+        </div>
     </div>
 </div>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from '../product';
 import { CommerceService } from '../commerce.service';
 
 @Component({
@@ -16,7 +15,7 @@ export class ShowproductComponent {
   fullPrice: number = 0;
   selectedStock: number = 1;
 
-  constructor(private route: ActivatedRoute, private service: CommerceService){
+  constructor(private route: ActivatedRoute, public service: CommerceService){
 
     this.route.params.subscribe(p => this.selectedProduct = p);
     this.images = this.selectedProduct.images.split(",");

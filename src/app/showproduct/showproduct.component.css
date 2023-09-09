@@ -131,3 +131,77 @@ select:focus{
     box-shadow:  8px 8px 11px 0px rgba(54, 33, 2, 0.58);
     outline: none;
 }
+
+#addToCart{
+
+    width: 300px;
+    height: 40px;
+    font-size: 22px;
+}
+
+
+.otherProducts{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.productCollections{
+
+    min-width: 300px;
+    height: 300px;
+    margin: 0 1rem 2rem 1rem;
+    position: relative;
+    border-radius: 40px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.productCollections>img{
+
+    width: 100%;
+}
+
+.productCollections:hover{
+
+    box-shadow:  8px 8px 11px 0px rgba(0,0,0,0.58);
+}
+
+span{
+
+    vertical-align: middle;
+}
+
+.fadedInformation{
+
+    position: absolute;
+    bottom: 0;
+    height: 180px;
+    width: 100%;
+    padding: 2rem 2rem;
+    background: linear-gradient(0deg,var(--dark) 80%, rgba(0, 0, 0, 0));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.fadedInformation>h2{
+
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+    cursor: pointer;
+}
+
+.money{
+
+    font-weight: 600;
+}
+
+mat-icon{
+
+    color: var(--orange);
+}
