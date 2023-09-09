@@ -51,7 +51,7 @@ export class CommerceService {
 
   reloadPage() {
     setTimeout(()=>{
-      window.onbeforeunload = function() {window.scrollTo(0,0);}
+      window.onbeforeunload = function() {window.scrollTo(0,0);};
       window.location.reload();
     }, 100);
 }

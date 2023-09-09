@@ -1,1 +1,35 @@
-<p>products works!</p>
+<div>
+    <div class="colored">
+        <div class="container">
+            <div class="imgHolder">
+                <img src="../../assets/carrot.jpg" alt="carrotLogo">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="intro">Welcome to our one-stop online destination for all your shopping needs! Whether you're on the hunt for the latest gadgets, stylish fashion, home essentials, or anything in between, you've come to the right place. We're committed to providing you with a diverse and curated selection of high-quality products to cater to your every desire. Explore our virtual aisles and discover the convenience of finding everything you need under one digital roof. At QuickTake, shopping has never been this easy, so dive in and start browsing now!</p>
+    </div>
+    <div class="buttonHolder">
+        <button>Gadgets</button>
+        <button>Beauty</button>
+        <button>Groceries</button>
+        <button>Home decor</button>
+        <button>Women's fashion</button>
+        <button>Men's fashion</button>
+        <button>Sunglasses</button>
+    </div>
+    <div class="productTitle container">
+        <h2>Browse all of our products:</h2>
+    </div>
+
+    <div class="products container">
+        <div class="productCollections" *ngFor="let x of this.service.products">
+            <img src={{x.thumbnail}} alt={{x.title}}>
+            <div class="fadedInformation">
+                <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                <p class="money">{{x.price}} EUR</p>
+                <h4>{{x.rating}}<span><mat-icon>star</mat-icon></span></h4>
+            </div>    
+        </div>
+    </div>
+</div>

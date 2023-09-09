@@ -1,0 +1,114 @@
+.colored{
+
+    background: var(--faded);
+    padding: 4rem 0 3rem 0;
+    margin: 0 0 2rem 0;
+    box-shadow:  8px 8px 11px 0px rgba(54, 33, 2, 0.58);
+}
+
+.container{
+
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.intro{
+
+    font-size: 20px;
+    line-height: 2rem;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.buttonHolder{
+
+    max-width: 1300px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--dark);
+    border-top: 2px solid var(--dark);
+}
+
+.buttonHolder button{
+
+    width: 150px;
+    font-size: 18px;
+    height: 60px;
+}
+
+.productTitle{
+
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--orange);
+}
+
+.products{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.productCollections{
+
+    min-width: 300px;
+    height: 300px;
+    margin: 0 1rem 2rem 1rem;
+    position: relative;
+    border-radius: 40px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.productCollections>img{
+
+    width: 100%;
+}
+
+.productCollections:hover{
+
+    box-shadow:  8px 8px 11px 0px rgba(0,0,0,0.58);
+}
+
+span{
+
+    vertical-align: middle;
+}
+
+.fadedInformation{
+
+    position: absolute;
+    bottom: 0;
+    height: 180px;
+    width: 100%;
+    padding: 2rem 2rem;
+    background: linear-gradient(0deg,var(--dark) 80%, rgba(0, 0, 0, 0));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.fadedInformation>h2{
+
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+    cursor: pointer;
+}
+
+.money{
+
+    font-weight: 600;
+}
+
+mat-icon{
+
+    color: var(--orange);
+}
