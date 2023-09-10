@@ -10,20 +10,21 @@
         <p class="intro">Welcome to our one-stop online destination for all your shopping needs! Whether you're on the hunt for the latest gadgets, stylish fashion, home essentials, or anything in between, you've come to the right place. We're committed to providing you with a diverse and curated selection of high-quality products to cater to your every desire. Explore our virtual aisles and discover the convenience of finding everything you need under one digital roof. At QuickTake, shopping has never been this easy, so dive in and start browsing now!</p>
     </div>
     <div class="buttonHolder">
-        <button>Gadgets</button>
-        <button>Beauty</button>
-        <button>Groceries</button>
-        <button>Home decor</button>
-        <button>Women's fashion</button>
-        <button>Men's fashion</button>
-        <button>Sunglasses</button>
+        <button (click)="checkDisplay(1)">Gadgets</button>
+        <button (click)="checkDisplay(2)">Beauty</button>
+        <button (click)="checkDisplay(3)">Groceries</button>
+        <button (click)="checkDisplay(4)">Home decor</button>
+        <button (click)="checkDisplay(5)">Women's fashion</button>
+        <button (click)="checkDisplay(6)">Men's fashion</button>
+        <button (click)="checkDisplay(7)">Sunglasses</button>
+        <button (click)="checkDisplay(8)">All</button>
     </div>
     <div class="productTitle container">
         <h2>Browse all of our products:</h2>
     </div>
 
     <div class="products container">
-        <div class="productCollections" *ngFor="let x of this.service.products">
+        <div class="productCollections" *ngFor="let x of this.toBeDisplayed">
             <img src={{x.thumbnail}} alt={{x.title}}>
             <div class="fadedInformation">
                 <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
