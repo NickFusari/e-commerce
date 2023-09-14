@@ -20,7 +20,7 @@
     margin-bottom: 2rem;
 }
 
-.buttonHolder{
+.radioHolder{
 
     max-width: 1300px;
     margin: 1rem auto;
@@ -32,11 +32,38 @@
     border-top: 2px solid var(--dark);
 }
 
-.buttonHolder button{
 
+.radioHolder>.innerRadio input{
+
+    display: none;
+}
+
+.radioHolder>.innerRadio label{
+
+    display: block;
     width: 150px;
+    padding: 10px 0;
     font-size: 18px;
-    height: 60px;
+    cursor: pointer;
+    background: var(--dark);
+    border: 3px solid var(--dark);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.radioHolder>.innerRadio label:hover{
+
+    border: 3px solid var(--orange);
+}
+
+.radioHolder .innerRadio .radio-custom:checked ~ label{
+
+    background: var(--orange);
+    border: 3px solid var(--orange);
 }
 
 .productTitle{

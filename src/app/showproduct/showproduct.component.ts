@@ -24,9 +24,6 @@ export class ShowproductComponent {
 
   ngOnInit(){
 
-    console.log(this.selectedProduct);
-    console.log(this.selectedProduct.stock);
-    console.log(this.service.products);
     this.selectOptions();
   }
 

@@ -9,7 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { ShowproductComponent } from './showproduct/showproduct.component';
 
 const routes: Routes = [
-  {path: "", pathMatch:"full", redirectTo: "movies"},
+  {path: "", pathMatch:"full", redirectTo: "collection"},
   {path: "collection", component: CollectionsComponent},
   {path: "products", component: ProductsComponent},
   {path: "about", component: AboutComponent},
@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: "cart", component: CartComponent},
   {path: "profile", component: ProfileComponent},
   {path: "product", component: ShowproductComponent},
-  {path: "**", pathMatch:"full", redirectTo: "movies"},
+  {path: "**", pathMatch:"full", redirectTo: "collection"},
 ];
 
 @NgModule({

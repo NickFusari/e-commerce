@@ -15,7 +15,6 @@ export class ProductsComponent {
 
     setTimeout(()=>{
       this.toBeDisplayed = this.service.products;
-      console.log(this.toBeDisplayed);
     }, 1000);
   }
 
