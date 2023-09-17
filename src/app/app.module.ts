@@ -17,6 +17,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowproductComponent } from './showproduct/showproduct.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     AboutComponent,
     ProductsComponent,
-    ShowproductComponent
+    ShowproductComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
