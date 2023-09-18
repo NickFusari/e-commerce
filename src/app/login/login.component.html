@@ -5,8 +5,8 @@
             <div class="login-container">
                 <h2>Login</h2>
                 <div class="login-form" action="#">
-                    <input type="text" placeholder="Username" required><br>
-                    <input type="password" placeholder="Password" required><br>
+                    <input type="text" placeholder="Username" required [(ngModel)]="this.actual.username"><br>
+                    <input type="password" placeholder="Password" required [(ngModel)]="this.actual.password"><br>
                     <button>Login</button>
                 </div>
                 <div class="signup-link">
