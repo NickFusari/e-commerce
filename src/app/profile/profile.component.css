@@ -37,3 +37,19 @@
 
     padding: 20px;
 }
+
+input{
+
+    border: none;
+    border-bottom: 1px solid var(--dark);
+    outline: none;
+    font-size: 22px;
+    margin: 0.8rem 0 2rem 0;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+input:hover{
+
+    background: var(--faded);
+}
