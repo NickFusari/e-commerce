@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="container">
+    <div class="signupCenter">
+        <div class="image-container"></div>
+        <div class="signup-centered">
+            <div class="signup-container">
+                <h2>Sign Up</h2>
+                <div class="signup-form" action="#">
+                    <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+                        <mat-step>
+                            <ng-template matStepLabel>Fill out your name</ng-template>
+                              <mat-label>Name</mat-label>
+                              <input matInput placeholder="Last name, First name" required>
+                              <mat-label>Email</mat-label>
+                              <input matInput placeholder="Email address" required>
+                              <mat-label>Phone</mat-label>
+                              <input matInput placeholder="Phone number" required>
+                            <div>
+                              <button matStepperNext>Next</button>
+                            </div>
+                        </mat-step>
+                        <mat-step>
+                            <ng-template matStepLabel>Fill out your address</ng-template>
+                              <mat-label>Postal Code</mat-label>
+                              <input matInput placeholder="Postal Code" required>
+                              <mat-label>City</mat-label>
+                              <input matInput placeholder="City" required>
+                              <mat-label>Street</mat-label>
+                              <input matInput placeholder="Street" required>
+                              <mat-label>House Number</mat-label>
+                              <input matInput placeholder="House Number" required>
+                            <div>
+                              <button matStepperNext>Next</button>
+                              <button class="back" matStepperPrevious>Back</button>
+                            </div>
+                        </mat-step>
+                        <mat-step>
+                          <ng-template matStepLabel>Done</ng-template>
+                          <div>
+                            <button>Sign Up</button>
+                            <button class="back" matStepperPrevious>Back</button>
+                          </div>
+                        </mat-step>
+                      </mat-stepper>
+                </div>
+                <div class="login-link">
+                    <p>Already have an account? <a routerLink="/login" name="login">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

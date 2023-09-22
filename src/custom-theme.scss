@@ -1,4 +1,5 @@
-
+$success:       #e47f46 !default;
+$primary:       #212121 !default;
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -33,3 +34,19 @@ $commerce-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($commerce-theme);
 
+.mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: transparent !important;
+  color: $success;
+  +.mat-step-label{
+    color: $success !important;
+  }
+}
+
+.mat-step-header .mat-step-icon-selected{
+  // background-color: $primary;
+  background-color: transparent !important;
+  color: $primary;
+  +.mat-step-label{
+    color: $primary !important;
+  }
+}

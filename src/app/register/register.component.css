@@ -1,0 +1,131 @@
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.signupCenter{
+
+    width: 50%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--orange);
+}
+
+.image-container{
+
+    background: url("../../assets/watch.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid var(--orange);
+}
+
+.signup-container {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+.signup-centered{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container h2 {
+    color: var(--orange);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+    width: 60%;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 1px solid var(--dark);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus{
+
+    outline: none;
+}
+
+.login-form button {
+
+    border-radius: 10px;
+    width: 150px;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.signup-link {
+    margin-top: 10px;
+}
+
+.signup-link p{
+
+    margin-top: 2rem;
+}
+
+.signup-link a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+mat-step{
+
+    color: var(--orange);
+    background: var(--orange);
+}
+
+mat-label{
+
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+    margin-bottom: 0.8rem;
+}
+
+input{
+
+    width: 200px;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--dark);
+    outline: none;
+    display: block;
+    justify-content: left;
+}
+
+button{
+
+    border-radius: 8px;
+    margin: 1rem 1rem 0 0;
+}
+
+.back{
+
+    background: var(--dark);
+}
