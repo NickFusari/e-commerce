@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from './product';
 import { Router } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
 
 @Injectable({
   providedIn: 'root'
@@ -55,4 +56,11 @@ export class CommerceService {
       window.location.reload();
     }, 100);
 }
+
+fetchMore(x: Array<Product>){
+
+  this.router.navigate(["products", x]);
+  this.reloadPage();
+}
+
 }

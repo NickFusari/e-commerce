@@ -9,11 +9,13 @@
                         <mat-step>
                             <ng-template matStepLabel>Fill out your name</ng-template>
                               <mat-label>Name</mat-label>
-                              <input matInput placeholder="Last name, First name" required>
+                              <input matInput placeholder="Last name, First name" required [(ngModel)]="this.profile.name">
                               <mat-label>Email</mat-label>
-                              <input matInput placeholder="Email address" required>
+                              <input matInput placeholder="Email address" required [(ngModel)]="this.profile.email">
+                              <mat-label>Password</mat-label>
+                              <input matInput placeholder="Password" type="password" required [(ngModel)]="this.profile.password">
                               <mat-label>Phone</mat-label>
-                              <input matInput placeholder="Phone number" required>
+                              <input matInput placeholder="Phone number" required [(ngModel)]="this.profile.phone">
                             <div>
                               <button matStepperNext>Next</button>
                             </div>
@@ -21,13 +23,13 @@
                         <mat-step>
                             <ng-template matStepLabel>Fill out your address</ng-template>
                               <mat-label>Postal Code</mat-label>
-                              <input matInput placeholder="Postal Code" required>
+                              <input matInput placeholder="Postal Code" required [(ngModel)]="this.profile.postalCode">
                               <mat-label>City</mat-label>
-                              <input matInput placeholder="City" required>
+                              <input matInput placeholder="City" required [(ngModel)]="this.profile.city">
                               <mat-label>Street</mat-label>
-                              <input matInput placeholder="Street" required>
+                              <input matInput placeholder="Street" required [(ngModel)]="this.profile.street">
                               <mat-label>House Number</mat-label>
-                              <input matInput placeholder="House Number" required>
+                              <input matInput placeholder="House Number" required [(ngModel)]="this.profile.houseNumber">
                             <div>
                               <button matStepperNext>Next</button>
                               <button class="back" matStepperPrevious>Back</button>
@@ -36,7 +38,7 @@
                         <mat-step>
                           <ng-template matStepLabel>Done</ng-template>
                           <div>
-                            <button>Sign Up</button>
+                            <button (click)="this.service.register(this.profile)">Sign Up</button>
                             <button class="back" matStepperPrevious>Back</button>
                           </div>
                         </mat-step>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommerceService } from '../commerce.service';
 import { Product } from '../product';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -9,12 +10,21 @@ import { Product } from '../product';
 })
 export class ProductsComponent {
 
-  toBeDisplayed: Array<Product> = new Array<Product>();
+  toBeDisplayed: any = new Array<Product>();
 
-  constructor(public service: CommerceService){
+  constructor(public service: CommerceService, private router: ActivatedRoute){
 
     setTimeout(()=>{
-      this.toBeDisplayed = this.service.products;
+      this.router.params.subscribe(x => {
+        if(x){
+
+          this.toBeDisplayed = this.service.products;
+          console.log(x)
+        }else{
+
+          this.toBeDisplayed = x;
+        }
+      })
     }, 1000);
   }
 

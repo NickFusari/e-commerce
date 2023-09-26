@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProfilemanagementService } from '../profilemanagement.service';
+import { Profile } from '../profile';
 
 @Component({
   selector: 'app-register',
@@ -8,6 +10,7 @@ import { Component } from '@angular/core';
 export class RegisterComponent {
 
   isLinear = true;
+  profile: Profile = new Profile();
 
-  constructor() {}
+  constructor( public service: ProfilemanagementService) {}
 }

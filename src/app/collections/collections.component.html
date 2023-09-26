@@ -20,7 +20,7 @@
                     <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
                 </div>    
             </div>
-            <div class="transfer">
+            <div class="transfer" (click)="this.service.fetchMore(this.service.gadgets)">
                 <p>Show more</p>
                 <mat-icon>double_arrow</mat-icon>
             </div>

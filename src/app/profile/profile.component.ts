@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProfilemanagementService } from '../profilemanagement.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+  constructor(service: ProfilemanagementService, private router: Router){
+
+    if(service.isLogged()){
+
+      this.router.navigate(["login"]);
+    }
+  }
 }
