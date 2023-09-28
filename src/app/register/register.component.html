@@ -1,3 +1,11 @@
+<div class="pop-up" *ngIf="this.service.alreadyExists">
+  <div class="inside">
+    <h2>This email is already in use.</h2>
+    <p>Please select one of the following options.</p>
+    <a routerLink="/login">Login</a>
+    <button (click)="this.service.anotherEmail()">Try with another email adress</button>
+  </div>
+</div>
 <div class="container">
     <div class="signupCenter">
         <div class="image-container"></div>
@@ -7,15 +15,16 @@
                 <div class="signup-form" action="#">
                     <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
                         <mat-step>
-                            <ng-template matStepLabel>Fill out your name</ng-template>
+                            <ng-template class="my-form" matStepLabel>Fill out your name</ng-template>
                               <mat-label>Name</mat-label>
-                              <input matInput placeholder="Last name, First name" required [(ngModel)]="this.profile.name">
+                              <input id="name" matInput placeholder="Last name, First name" [(ngModel)]="this.profile.name" required>
                               <mat-label>Email</mat-label>
-                              <input matInput placeholder="Email address" required [(ngModel)]="this.profile.email">
+                              <input id="email" matInput placeholder="Email address" [(ngModel)]="this.profile.email">
+                              <span></span>
                               <mat-label>Password</mat-label>
-                              <input matInput placeholder="Password" type="password" required [(ngModel)]="this.profile.password">
+                              <input id="password" matInput placeholder="Password" type="password" [(ngModel)]="this.profile.password">
                               <mat-label>Phone</mat-label>
-                              <input matInput placeholder="Phone number" required [(ngModel)]="this.profile.phone">
+                              <input id="Phone" matInput placeholder="Phone number" [(ngModel)]="this.profile.phone">
                             <div>
                               <button matStepperNext>Next</button>
                             </div>
@@ -23,13 +32,13 @@
                         <mat-step>
                             <ng-template matStepLabel>Fill out your address</ng-template>
                               <mat-label>Postal Code</mat-label>
-                              <input matInput placeholder="Postal Code" required [(ngModel)]="this.profile.postalCode">
+                              <input matInput placeholder="Postal Code" [(ngModel)]="this.profile.postalCode">
                               <mat-label>City</mat-label>
-                              <input matInput placeholder="City" required [(ngModel)]="this.profile.city">
+                              <input matInput placeholder="City" [(ngModel)]="this.profile.city">
                               <mat-label>Street</mat-label>
-                              <input matInput placeholder="Street" required [(ngModel)]="this.profile.street">
+                              <input matInput placeholder="Street" [(ngModel)]="this.profile.street">
                               <mat-label>House Number</mat-label>
-                              <input matInput placeholder="House Number" required [(ngModel)]="this.profile.houseNumber">
+                              <input matInput placeholder="House Number" [(ngModel)]="this.profile.houseNumber">
                             <div>
                               <button matStepperNext>Next</button>
                               <button class="back" matStepperPrevious>Back</button>

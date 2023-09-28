@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 export class ProfilemanagementService {
 
   currentProfileList: Array<Profile> = new Array<Profile>;
+  alreadyExists: boolean = false;
 
   constructor(public router: Router) { }
 
@@ -19,35 +20,48 @@ export class ProfilemanagementService {
   register(profile: Profile){
 
     if(localStorage.getItem("profileList") == null){
-
       this.currentProfileList.push(profile);
-      localStorage.setItem("profileList", JSON.stringify(this.currentProfileList));
-    } else{
+      this.savingToLocal();
 
+    } else{
       this.currentProfileList = JSON.parse(localStorage.getItem("profileList") ?? '[]');
 
-      this.currentProfileList.push(profile);
-      localStorage.setItem("profileList", JSON.stringify(this.currentProfileList));
-    }
+      if(this.duplicateChecker(profile).length == 0){
+        this.currentProfileList.push(profile);
+        this.savingToLocal();
 
-    this.router.navigate(["collection"]);
+      }else{
+
+        this.alreadyExists = true;
+      }
+    }
   }
 
-  login(){}
+  savingToLocal(){
 
-  duplicateChecker(profile: Profile){
+    localStorage.setItem("profileList", JSON.stringify(this.currentProfileList));
+    this.router.navigate(["login"]);
+  }
+
+  duplicateChecker(profileToTest: Profile){
+
+    let result: Array<Profile> = [];
 
     this.currentProfileList.map(x => {
-
-      if(x.email === profile.email){
-
-        alert("You have already been registered!");
-        return true;
-        
-      } else {
-
-        return false;
+      if(x.email === profileToTest.email){
+        result.push(x);
       }
-    })
+    });
+
+    console.log(result);
+    return result;
   }
+
+  anotherEmail(){
+
+    this.alreadyExists = false;
+  }
+
+
+  login(){}
 }
