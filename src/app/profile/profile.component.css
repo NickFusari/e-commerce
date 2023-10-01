@@ -53,3 +53,9 @@ input:hover{
 
     background: var(--faded);
 }
+
+button{
+
+    font-size: 1rem;
+    margin: 0 0 2rem 1rem;
+}

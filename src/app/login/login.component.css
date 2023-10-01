@@ -1,3 +1,8 @@
+
+
+/* General layout */
+
+
 .container {
 
     display: flex;
@@ -7,10 +12,10 @@
     margin: 0;
 }
 
-.loginCenter{
+.login-center{
 
     width: 50%;
-    height: 60%;
+    height: 70%;
     display: grid;
     grid-template-columns: 40% 60%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -29,6 +34,10 @@
     height: 100%;
     border-right: 2px solid var(--orange);
 }
+
+
+/* Main Login style */
+
 
 .login-container {
     width: 100%;
@@ -91,4 +100,12 @@
 
 .signup-link a:hover {
     text-decoration: underline;
+}
+
+.error{
+
+    color: rgb(194, 0, 0);
+    font-size: 0.7rem;
+    background: rgba(255, 0, 0, 0.188);
+    padding: 5px 0;
 }

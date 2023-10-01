@@ -7,13 +7,18 @@ import { Router } from '@angular/router';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent {
+export class ProfileComponent{
 
-  constructor(service: ProfilemanagementService, private router: Router){
+  constructor(public usermanagement: ProfilemanagementService, private router: Router){
 
-    if(service.isLogged()){
+    if(usermanagement.isLogged()){
 
       this.router.navigate(["login"]);
     }
+  }
+
+  ngOnInit(){
+
+    this.usermanagement.loggedProfile = JSON.parse(localStorage.getItem("currentUser") ?? "[]");
   }
 }

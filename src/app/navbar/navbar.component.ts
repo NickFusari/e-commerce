@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProfilemanagementService } from '../profilemanagement.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  constructor(public usermanagement: ProfilemanagementService){}
 }

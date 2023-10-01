@@ -1,13 +1,20 @@
-<div class="pop-up" *ngIf="this.service.alreadyExists">
+<div class="pop-up" *ngIf="this.usermanagement.alreadyExists">
   <div class="inside">
     <h2>This email is already in use.</h2>
     <p>Please select one of the following options.</p>
     <a routerLink="/login">Login</a>
-    <button (click)="this.service.anotherEmail()">Try with another email adress</button>
+    <button (click)="this.usermanagement.reset()">Try with another email adress</button>
+  </div>
+</div>
+<div class="pop-up" *ngIf="this.usermanagement.emptyFields">
+  <div class="inside">
+    <h2>There are still some fields to fill out.</h2>
+    <p>Please select one of the following options.</p>
+    <button (click)="this.usermanagement.reset()">Continue</button>
   </div>
 </div>
 <div class="container">
-    <div class="signupCenter">
+    <div class="signup-center">
         <div class="image-container"></div>
         <div class="signup-centered">
             <div class="signup-container">
@@ -47,14 +54,14 @@
                         <mat-step>
                           <ng-template matStepLabel>Done</ng-template>
                           <div>
-                            <button (click)="this.service.register(this.profile)">Sign Up</button>
+                            <button (click)="this.usermanagement.register(this.profile)">Sign Up</button>
                             <button class="back" matStepperPrevious>Back</button>
                           </div>
                         </mat-step>
                       </mat-stepper>
                 </div>
                 <div class="login-link">
-                    <p>Already have an account? <a routerLink="/login" name="login">Login</a></p>
+                    <p>Already have an account? <a id="login" routerLink="/login" name="login">Login</a></p>
                 </div>
             </div>
         </div>

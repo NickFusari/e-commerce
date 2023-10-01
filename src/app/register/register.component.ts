@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProfilemanagementService } from '../profilemanagement.service';
 import { Profile } from '../profile';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,5 +13,11 @@ export class RegisterComponent {
   isLinear = true;
   profile: Profile = new Profile();
 
-  constructor( public service: ProfilemanagementService) {}
+  constructor( public usermanagement: ProfilemanagementService, private router: Router) {
+
+    if(!this.usermanagement.isLogged()){
+
+      this.router.navigate(["profile"]);
+    }
+  }
 }

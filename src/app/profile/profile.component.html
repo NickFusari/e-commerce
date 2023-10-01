@@ -5,11 +5,13 @@
                 <h2>Personal Information</h2>
             </div>
             <p>Name:</p>
-            <input type="text">
+            <input type="text" [(ngModel)]="this.usermanagement.loggedProfile.name">
             <p>Email:</p>
-            <input type="email">
+            <input type="email" [(ngModel)]="this.usermanagement.loggedProfile.email">
+            <p>Password:</p>
+            <input type="password" [(ngModel)]="this.usermanagement.loggedProfile.password">
             <p>Phone:</p>
-            <input type="phone">
+            <input type="phone" [(ngModel)]="this.usermanagement.loggedProfile.phone">
         </div>
     
         <div class="address-options">
@@ -17,19 +19,14 @@
                 <h2>Address Options</h2>
             </div>
             <p>Postal Code:</p>
-            <input type="number">
+            <input type="number" [(ngModel)]="this.usermanagement.loggedProfile.postalCode">
             <p>City:</p>
-            <input type="text">
+            <input type="text" [(ngModel)]="this.usermanagement.loggedProfile.city">
             <p>Street:</p>
-            <input type="text">
+            <input type="text" [(ngModel)]="this.usermanagement.loggedProfile.street">
             <p>House:</p>
-            <input type="number">
+            <input type="number" [(ngModel)]="this.usermanagement.loggedProfile.houseNumber">
         </div>
-    
-        <div class="order-history">
-            <div class="header">
-                <h2>Order History</h2>
-            </div>
-        </div>
+        <button (click)="this.usermanagement.updateProfile()">Update</button>
     </div>
 </div>

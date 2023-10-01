@@ -1,13 +1,14 @@
 <div class="container">
-    <div class="loginCenter">
+    <div class="login-center">
         <div class="image-container"></div>
         <div class="login-centered">
             <div class="login-container">
                 <h2>Login</h2>
                 <div class="login-form" action="#">
-                    <input type="text" placeholder="Username" required [(ngModel)]="this.actual.username"><br>
+                    <input type="text" placeholder="Email address" required [(ngModel)]="this.actual.email"><br>
                     <input type="password" placeholder="Password" required [(ngModel)]="this.actual.password"><br>
-                    <button>Login</button>
+                    <p class="error" *ngIf="this.usermanagement.incorrectCredentials">Your credentials are either missing or invalid. Try again.</p>
+                    <button (click)="this.usermanagement.login(actual)">Login</button>
                 </div>
                 <div class="signup-link">
                     <p>Don't have an account? <a routerLink="/register" name="register">Sign Up</a></p>
