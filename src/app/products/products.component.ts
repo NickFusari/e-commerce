@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommerceService } from '../commerce.service';
 import { Product } from '../product';
 import { ActivatedRoute } from '@angular/router';
+import { ShoppingcartService } from '../shoppingcart.service';
 
 @Component({
   selector: 'app-products',

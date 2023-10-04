@@ -59,3 +59,21 @@ button{
     font-size: 1rem;
     margin: 0 0 2rem 1rem;
 }
+
+h3{
+
+    margin-bottom: 1rem;
+}
+
+.check-shopping-cart{
+
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--dark);
+}
+
+.order-listed{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

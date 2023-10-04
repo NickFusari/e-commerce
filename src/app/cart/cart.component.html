@@ -7,45 +7,34 @@
             <div class="header">
                 <h2>Products:</h2>
             </div>
-            <div class="cart-item">
-                <img src="product1.jpg" alt="Product 1">
-                <div class="cart-item-info">
-                    <div class="cart-item-name">Product Name 1</div>
-                    <div class="cart-item-price">$19.99</div>
-                </div>
-                <div class="cart-item-remove">Remove</div>
+            <div class="extra-messages" *ngIf="this.isEmpty">
+                <img src="../../assets/empty-cart.png" alt="empty shopping cart">
             </div>
-            <div class="cart-item">
-                <img src="product2.jpg" alt="Product 2">
-                <div class="cart-item-info">
-                    <div class="cart-item-name">Product Name 2</div>
-                    <div class="cart-item-price">$29.99</div>
-                </div>
-                <div class="cart-item-remove">Remove</div>
+            <div class="extra-messages" *ngIf="this.shoppingCart.orderComplete">
+                <img src="../../assets/order-confirmed.png" alt="empty shopping cart">
             </div>
-            <div class="cart-item">
-                <img src="product2.jpg" alt="Product 2">
-                <div class="cart-item-info">
-                    <div class="cart-item-name">Product Name 3</div>
-                    <div class="cart-item-price">$29.99</div>
+            <div *ngIf="this.shoppingCart.showList">
+                <div *ngFor="let x of this.currentList.orders">
+                    <div class="cart-item">
+                        <img src={{x.product.thumbnail}} alt={{x.product.title}}>
+                        <div class="cart-item-info">
+                            <p class="cart-item-name">{{x.product.title}}</p>
+                            <p>Price: ${{x.product.price}}</p>
+                            <p>Selected Amount: {{x.quantity}}</p>
+                            <div class="cart-item-price">Total: ${{x.totalPrice}}</div>
+                        </div>
+                        <div class="cart-item-remove" (click)="this.shoppingCart.removeFromCart(x)">Remove</div>
+                    </div>
                 </div>
-                <div class="cart-item-remove">Remove</div>
-            </div>
-            <div class="cart-item">
-                <img src="product2.jpg" alt="Product 2">
-                <div class="cart-item-info">
-                    <div class="cart-item-name">Product Name 4</div>
-                    <div class="cart-item-price">$29.99</div>
-                </div>
-                <div class="cart-item-remove">Remove</div>
             </div>
         </div>
         <div class="cart-total">
             <div class="header">
                 <h2>Checkout:</h2>
             </div>
-            <p>Total: $49.98</p>
-            <button>Continue</button>
+            <p>Total: ${{this.totalAmount}}</p>
+            <button (click)="this.shoppingCart.order()">Continue</button>
+            <span class="error-message" *ngIf="this.shoppingCart.emptyCart">Your cart is empty!</span>
         </div>
     </div>
 </div>

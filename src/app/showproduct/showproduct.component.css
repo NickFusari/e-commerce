@@ -205,3 +205,13 @@ mat-icon{
 
     color: var(--orange);
 }
+
+.confirm-message{
+
+    position: absolute;
+    margin-top: 1rem;
+    padding: 10px 15px;
+    background: rgba(0, 246, 0, 0.245);
+    border-radius: 8px;
+    border: 1px solid rgb(0, 255, 0);
+}

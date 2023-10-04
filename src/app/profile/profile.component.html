@@ -28,5 +28,18 @@
             <input type="number" [(ngModel)]="this.usermanagement.loggedProfile.houseNumber">
         </div>
         <button (click)="this.usermanagement.updateProfile()">Update</button>
+        <div class="previous-orders">
+            <div class="header">
+                <h2>Previous Orders</h2>
+            </div>
+            <div class="check-shopping-cart" *ngFor="let x of this.usermanagement.loggedProfile.orders">
+                <h3>Ordered items</h3>
+                <div class="order-listed" *ngFor="let y of x.orders">
+                    <p><u>Name:</u> {{y.product.title}}</p>
+                    <p><u>Order Quantity:</u> {{y.quantity}} pcs</p>
+                    <p><u>Pice:</u>    ${{y.totalPrice}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

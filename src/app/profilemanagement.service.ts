@@ -21,6 +21,12 @@ export class ProfilemanagementService {
     return localStorage.getItem('currentUser') == null ? true : false;
   }
 
+  currentProfileListRefresh(){
+
+    this.currentProfileList = JSON.parse(localStorage.getItem("profileList") ?? '[]');
+
+  }
+
   register(profile: Profile){
 
     if(this.checkIfEmpty(profile)){
@@ -32,7 +38,7 @@ export class ProfilemanagementService {
       this.savingToLocal();
 
     } else{
-      this.currentProfileList = JSON.parse(localStorage.getItem("profileList") ?? '[]');
+        this.currentProfileListRefresh();
 
       if(this.duplicateChecker(profile).length == 0){
         this.currentProfileList.push(profile);
@@ -90,7 +96,7 @@ export class ProfilemanagementService {
 
   login(l: Login){
 
-    this.currentProfileList = JSON.parse(localStorage.getItem("profileList") ?? "[]");
+    this.currentProfileListRefresh();
     this.currentProfileList.map(x => {
       if(l.email === x.email && l.password === x.password){
 
@@ -114,7 +120,7 @@ export class ProfilemanagementService {
 
     localStorage.removeItem("currentUser");
     localStorage.setItem("currentUser", JSON.stringify(this.loggedProfile));
-    this.currentProfileList = JSON.parse(localStorage.getItem("profileList") ?? "[]");
+    this.currentProfileListRefresh();
     let correctProfile: Profile = new Profile();
     this.currentProfileList.map(x => {
       if(x.email === this.loggedProfile.email){
@@ -122,8 +128,9 @@ export class ProfilemanagementService {
       }
     });
     let index: number = this.currentProfileList.indexOf(correctProfile);
-    this.currentProfileList.splice(index, index+1, this.loggedProfile);
+    this.currentProfileList.splice(index, 1, this.loggedProfile);
     localStorage.setItem("profileList", JSON.stringify(this.currentProfileList));
+    window.scrollTo(0,0);
     window.location.reload();
   }
 }

@@ -1,4 +1,4 @@
-import { Shoppingcart } from "./shoppingcart";
+import { ShoppingCart } from "./shopping-cart";
 
 export class Profile {
 
@@ -10,5 +10,5 @@ export class Profile {
     city: string = '';
     street: string = '';
     houseNumber: number = 0;
-    orders: Array<Shoppingcart> = new Array<Shoppingcart>();
+    orders: Array<ShoppingCart> = new Array<ShoppingCart>;
 }

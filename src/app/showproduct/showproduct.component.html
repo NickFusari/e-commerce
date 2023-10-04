@@ -19,7 +19,8 @@
                 <p><span>Quantity:</span></p>
                 <select id="stockCount" (change)="getSelectedAndChangePrice($event)">
                 </select>
-                <button id="addToCart">Add to Cart</button>
+                <button id="addToCart" (click)="this.shoppingCart.addToCart(this.selectedProduct, this. selectedStock);">Add to Cart</button>
+                <div class="confirm-message" *ngIf="this.shoppingCart.confirmed">Product has been added to your cart successfully!</div>
             </div>
         </div>
     </div>
