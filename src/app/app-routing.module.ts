@@ -9,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { ShowproductComponent } from './showproduct/showproduct.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AddressComponent } from './address/address.component';
 
 const routes: Routes = [
   {path: "", pathMatch:"full", redirectTo: "collection"},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "register", component: RegisterComponent},
   {path: "cart", component: CartComponent},
+  {path: "address", component: AddressComponent},
   {path: "**", pathMatch:"full", redirectTo: "collection"},
 ];
 

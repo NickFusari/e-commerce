@@ -25,6 +25,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import {ReactiveFormsModule} from '@angular/forms';
+import { AddressComponent } from './address/address.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     ProductsComponent,
     ShowproductComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,

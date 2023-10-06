@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="header">
+        <h1>Shopping Cart</h1>
+    </div>
+    <div class="cart-container">
+        <div class="productContainer">
+
+            <div class="extra-messages" *ngIf="this.shoppingCart.orderComplete">
+                <img src="../../assets/order-confirmed.png" alt="empty shopping cart">
+            </div>
+            <div class="local-contet" *ngIf="this.shoppingCart.showList">
+                <div class="header">
+                    <h2>Address Details:</h2>
+                </div>
+                <label for="postal-code">Postal Code:</label>
+                <input type="number" name="postal-code" [(ngModel)]="this.values.postalCode">
+                <label for="city">City:</label>
+                <input type="text" name="city" [(ngModel)]="this.values.city">
+                <label for="street">Street:</label>
+                <input type="text" name="street" [(ngModel)]="this.values.street">
+                <label for="house-number">House Number:</label>
+                <input type="number" name="house-number" [(ngModel)]="this.values.houseNumber">
+                <p *ngIf="this.errorMessage">There are empty fields. Please provide us with the necessary information.</p>
+                <button (click)="this.sendOrder()">Send order</button>
+            </div>
+        </div>
+    </div>
+</div>

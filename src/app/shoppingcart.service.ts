@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { Product } from './product';
 import { ShoppingCart } from './shopping-cart';
 import { Singularorder } from './singularorder';
-import { Profile } from './profile';
 import { ProfilemanagementService } from './profilemanagement.service';
-import { CartComponent } from './cart/cart.component';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,7 @@ export class ShoppingcartService {
   showList: boolean = true;
   emptyCart: boolean = false;
 
-  constructor(private profilemanagement: ProfilemanagementService) { }
+  constructor(private profilemanagement: ProfilemanagementService, private router: Router) { }
 
 
   ngOnInit(){
@@ -85,18 +84,23 @@ export class ShoppingcartService {
 
   order(){
 
-    if(localStorage.getItem("currentShoppingCart") !== null){
-      let finalList: ShoppingCart = JSON.parse(localStorage.getItem("currentShoppingCart") ?? "[]");
-      this.profilemanagement.loggedProfile = JSON.parse(localStorage.getItem("currentUser") ?? "[]");
-      this.profilemanagement.loggedProfile.orders.push(finalList);
-      localStorage.removeItem("currentShoppingCart");
-      this.orderComplete = true;
-      this.showList = false;
-      setTimeout(()=>{
-        this.profilemanagement.updateProfile();
-      }, 2000);
-    }else{
-      this.emptyCart = true;
+    if(localStorage.getItem("currentUser") !== null){
+      if(localStorage.getItem("currentShoppingCart") !== null){
+        let finalList: ShoppingCart = JSON.parse(localStorage.getItem("currentShoppingCart") ?? "[]");
+        this.profilemanagement.loggedProfile = JSON.parse(localStorage.getItem("currentUser") ?? "[]");
+        this.profilemanagement.loggedProfile.orders.push(finalList);
+        localStorage.removeItem("currentShoppingCart");
+        this.orderComplete = true;
+        this.showList = false;
+        setTimeout(()=>{
+          this.profilemanagement.updateProfile();
+        }, 2000);
+      }else{
+        this.emptyCart = true;
+      }
+    } else{
+
+      this.router.navigate(["address"]);
     }
   }
 }

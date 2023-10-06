@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { CommerceService } from '../commerce.service';
 import { Product } from '../product';
-import { ActivatedRoute } from '@angular/router';
-import { ShoppingcartService } from '../shoppingcart.service';
 
 @Component({
   selector: 'app-products',
@@ -13,19 +11,17 @@ export class ProductsComponent {
 
   toBeDisplayed: any = new Array<Product>();
 
-  constructor(public service: CommerceService, private router: ActivatedRoute){
+  constructor(public service: CommerceService){
 
     setTimeout(()=>{
-      this.router.params.subscribe(x => {
-        if(x){
+      let localItem = localStorage.getItem("fetchedProducts");
+      if(localItem !== null){
 
-          this.toBeDisplayed = this.service.products;
-          console.log(x)
-        }else{
-
-          this.toBeDisplayed = x;
-        }
-      })
+        this.toBeDisplayed = JSON.parse(localItem);
+        localStorage.removeItem("fetchedProducts");
+      }else{
+        this.toBeDisplayed = this.service.products;
+      }
     }, 1000);
   }
 

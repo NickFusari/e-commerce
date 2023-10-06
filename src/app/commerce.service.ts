@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from './product';
 import { Router } from '@angular/router';
-import { ProductsComponent } from './products/products.component';
 
 @Injectable({
   providedIn: 'root'
@@ -20,28 +19,37 @@ export class CommerceService {
 
   constructor(private http: HttpClient, private router: Router) { 
 
+    this.dummyProductImport();
+  }
+
+  dummyProductImport(){
+
     this.http.get('https://dummyjson.com/products?limit=100').subscribe((data) => {
       let tempData = JSON.parse(JSON.stringify(data));
       this.products = tempData.products;
-
-      this.products.forEach(prod =>{
-        if(prod.category == "smartphones" || prod.category == "laptops"){
-          this.gadgets.push(prod);
-        }else if(prod.category == "fragrances"){
-          this.beauty.push(prod);
-        }else if(prod.category == "groceries"){
-          this.groceries.push(prod);
-        }else if(prod.category == "home-decoration" || prod.category == "furniture"){
-          this.homedeco.push(prod);
-        }else if(prod.category == "womens-dresses" || prod.category == "womens-shoes" || prod.category == "womens-watches" || prod.category == "womens-bags" || prod.category == "womens-jewellery"){
-          this.womens.push(prod);
-        }else if(prod.category == "mens-shirts" || prod.category == "mens-shoes" || prod.category == "mens-watches"){
-          this.mens.push(prod);
-        }else if(prod.category == "sunglasses"){
-          this.sunglasses.push(prod);
-        }
-      })
+      this.distributeProducts();
     });
+  }
+
+  distributeProducts(){
+
+    this.products.forEach(prod =>{
+      if(prod.category == "smartphones" || prod.category == "laptops"){
+        this.gadgets.push(prod);
+      }else if(prod.category == "fragrances"){
+        this.beauty.push(prod);
+      }else if(prod.category == "groceries"){
+        this.groceries.push(prod);
+      }else if(prod.category == "home-decoration" || prod.category == "furniture"){
+        this.homedeco.push(prod);
+      }else if(prod.category == "womens-dresses" || prod.category == "womens-shoes" || prod.category == "womens-watches" || prod.category == "womens-bags" || prod.category == "womens-jewellery"){
+        this.womens.push(prod);
+      }else if(prod.category == "mens-shirts" || prod.category == "mens-shoes" || prod.category == "mens-watches"){
+        this.mens.push(prod);
+      }else if(prod.category == "sunglasses"){
+        this.sunglasses.push(prod);
+      }
+    })
   }
 
   openProduct(id: Product){
@@ -59,7 +67,8 @@ export class CommerceService {
 
 fetchMore(x: Array<Product>){
 
-  this.router.navigate(["products", x]);
+  localStorage.setItem("fetchedProducts", JSON.stringify(x));
+  this.router.navigate(["products"]);
   this.reloadPage();
 }
 
