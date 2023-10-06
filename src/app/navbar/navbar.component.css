@@ -31,3 +31,21 @@ span{
 
     color: var(--orange);
 }
+
+.menu{
+
+    display: none;
+}
+
+@media(max-width: 1300px){
+
+    .primary, .secondary{
+
+        display: none;
+    }
+
+    .menu{
+
+        display: block;
+    }
+}

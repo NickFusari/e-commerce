@@ -1,16 +1,19 @@
 <div class="navbar">
     <div class="container">
         <h2><span><mat-icon>storefront</mat-icon></span> QuickTake</h2>
-        <div>
+        <div class="primary">
             <a routerLink="/collection" name="collection">Collections</a>
             <a routerLink="/products" name="products">Products</a>
             <a routerLink="/about" name="about">About</a>
             <a routerLink="/contact" name="contact">Contact</a>
         </div>
-        <div>
+        <div class="secondary">
             <a routerLink="/profile" name="profile"><span><mat-icon>person</mat-icon></span> Profile</a>
             <a routerLink="/cart" name="cart"><span><mat-icon>shopping_cart</mat-icon></span> Cart</a>
             <a routerLink="/" *ngIf="!this.usermanagement.isLogged()" (click)="this.usermanagement.logout()" name="logout"><span><mat-icon>logout</mat-icon></span> Logout</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/"><mat-icon>menu</mat-icon></a>
         </div>
     </div>
 </div>

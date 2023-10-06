@@ -20,7 +20,7 @@
 
 .cart-container {
 
-    width: 1300px;
+    width: 100%;
     margin: 20px auto;
     background-color: white;
     padding: 20px;
@@ -114,4 +114,17 @@
     border: 1px solid red;
     border-radius: 8px;
     width: 100%;
+}
+
+@media(max-width: 1300px){
+
+    .cart-container{
+
+        display: block;
+    }
+
+    .container{
+
+        padding: 0 2rem;
+    }
 }

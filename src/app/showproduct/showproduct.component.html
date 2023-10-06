@@ -1,10 +1,10 @@
 <div class="fullcontainer">
     <div class="container">
-        <div class="titleHolder">
+        <div class="title-holder">
             <h2>{{selectedProduct.title}}</h2>
         </div>
         <div class="devider">
-            <div class="carouselHolder">
+            <div class="carousel-holder">
                 <div class="carousel">
                     <img src={{images[index]}} alt={{selectedProduct.title}}>
                     <button (click)="this.nextImage()" id="next"><mat-icon>chevron_right</mat-icon></button>
@@ -17,23 +17,23 @@
                 <p><span>Description:</span> {{selectedProduct.description}}</p>
                 <p id="price"><span>Price:</span> {{fullPrice}}<mat-icon id="money">attach_money</mat-icon></p>
                 <p><span>Quantity:</span></p>
-                <select id="stockCount" (change)="getSelectedAndChangePrice($event)">
+                <select id="stock-count" (change)="getSelectedAndChangePrice($event)">
                 </select>
-                <button id="addToCart" (click)="this.shoppingCart.addToCart(this.selectedProduct, this. selectedStock);">Add to Cart</button>
+                <button id="add-to-cart" (click)="this.shoppingCart.addToCart(this.selectedProduct, this. selectedStock);">Add to Cart</button>
                 <div class="confirm-message" *ngIf="this.shoppingCart.confirmed">Product has been added to your cart successfully!</div>
             </div>
         </div>
     </div>
 </div>
 <div class="container">
-    <div class="titleHolder">
+    <div class="title-holder">
         <h2>Products you might also like:</h2>
     </div>
 
-    <div class="otherProducts">
-        <div class="productCollections" *ngFor="let x of this.service.products">
+    <div class="other-products">
+        <div class="product-collections" *ngFor="let x of this.service.products">
             <img src={{x.thumbnail}} alt={{x.title}}>
-            <div class="fadedInformation">
+            <div class="faded-information">
                 <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
                 <p class="money">{{x.price}} EUR</p>
                 <h4>{{x.rating}}<span><mat-icon>star</mat-icon></span></h4>

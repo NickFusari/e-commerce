@@ -1,3 +1,11 @@
+.img-holder{
+
+    background: url("../../assets/eyes.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .container{
 
     max-width: 1300px;
@@ -27,4 +35,13 @@ p{
     border-radius: 50px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+
+@media(max-width: 1300px){
+
+    .container{
+
+        padding: 0 2rem;
+    }
 }

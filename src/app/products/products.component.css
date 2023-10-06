@@ -1,3 +1,11 @@
+.img-holder{
+
+    background: url("../../assets/carrot.jpg");
+    background-position-y: 40% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .colored{
 
     background: var(--faded);
@@ -20,7 +28,7 @@
     margin-bottom: 2rem;
 }
 
-.radioHolder{
+.radio-holder{
 
     max-width: 1300px;
     margin: 1rem auto;
@@ -33,12 +41,12 @@
 }
 
 
-.radioHolder>.innerRadio input{
+.radio-holder>.inner-radio input{
 
     display: none;
 }
 
-.radioHolder>.innerRadio label{
+.radio-holder>.inner-radio label{
 
     display: block;
     width: 150px;
@@ -55,18 +63,18 @@
     transition: all 0.3s ease;
 }
 
-.radioHolder>.innerRadio label:hover{
+.radio-holder>.inner-radio label:hover{
 
     border: 3px solid var(--orange);
 }
 
-.radioHolder .innerRadio .radio-custom:checked ~ label{
+.radio-holder .inner-radio .radio-custom:checked ~ label{
 
     background: var(--orange);
     border: 3px solid var(--orange);
 }
 
-.productTitle{
+.product-title{
 
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -80,7 +88,7 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-.productCollections{
+.product-collections{
 
     min-width: 300px;
     height: 300px;
@@ -93,12 +101,12 @@
     transition: all 0.3s ease;
 }
 
-.productCollections>img{
+.product-collections>img{
 
     width: 100%;
 }
 
-.productCollections:hover{
+.product-collections:hover{
 
     box-shadow:  8px 8px 11px 0px rgba(0,0,0,0.58);
 }
@@ -108,7 +116,7 @@ span{
     vertical-align: middle;
 }
 
-.fadedInformation{
+.faded-information{
 
     position: absolute;
     bottom: 0;
@@ -122,7 +130,7 @@ span{
     justify-content: space-evenly;
 }
 
-.fadedInformation>h2{
+.faded-information>h2{
 
     color: var(--orange);
     text-decoration: underline;
@@ -138,4 +146,56 @@ span{
 mat-icon{
 
     color: var(--orange);
+}
+
+@media(max-width: 1300px){
+
+    .colored, .container{
+
+        padding: 2rem 2rem 1rem 2rem;
+    }
+
+    .radio-holder::-webkit-scrollbar{
+
+        width: 0;
+        height: 0;
+    }
+
+    .radio-holder{
+
+        padding: 2rem 0rem;
+        margin: 0 2rem;
+        overflow-x: auto;
+        gap: 1rem;
+        justify-content:flex-start;
+    }
+
+    .products{
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container{
+
+        text-align: justify;
+    }
+}
+
+@media(max-width: 1060px){
+
+    .products{
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 730px){
+
+    .products{
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

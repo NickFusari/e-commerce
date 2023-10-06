@@ -77,3 +77,8 @@ h3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+.order-listed p{
+
+    margin-bottom: 1rem;
+}

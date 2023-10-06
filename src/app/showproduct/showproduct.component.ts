@@ -57,7 +57,7 @@ export class ShowproductComponent {
       option.textContent = current.toString();
       option.setAttribute("value", current.toString());
 
-      document.querySelector("#stockCount")?.appendChild(option);
+      document.querySelector("#stock-count")?.appendChild(option);
       current += 1;
     }
   }

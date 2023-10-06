@@ -13,7 +13,7 @@
     border-bottom-left-radius: 5px;
 }
 
-.contactInfo{
+.contact-info{
 
     margin-left: 2rem;
     background: var(--faded);
@@ -24,13 +24,13 @@
     border-bottom-right-radius: 5px;
 }
 
-.contactInfo h2{
+.contact-info h2{
 
     font-size: 2rem;
     margin-bottom: 3rem;
 }
 
-.contactInfo p{
+.contact-info p{
 
     margin-bottom: 1rem;
 }
@@ -40,12 +40,12 @@
     margin: 4rem 0;
 }
 
-.googleMap {
+.google-map {
         padding-bottom: 50%;
         position: relative;
 }
 
-.googleMap iframe {
+.google-map iframe {
         height: 100%;
         width: 100%;
         left: 0;

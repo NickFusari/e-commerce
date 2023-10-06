@@ -1,56 +1,55 @@
 <div>
     <div class="colored">
         <div class="container">
-            <div class="imgHolder">
-                <img src="../../assets/carrot.jpg" alt="carrotLogo">
+            <div class="img-holder">
             </div>
         </div>
     </div>
     <div class="container">
         <p class="intro">Welcome to our one-stop online destination for all your shopping needs! Whether you're on the hunt for the latest gadgets, stylish fashion, home essentials, or anything in between, you've come to the right place. We're committed to providing you with a diverse and curated selection of high-quality products to cater to your every desire. Explore our virtual aisles and discover the convenience of finding everything you need under one digital roof. At QuickTake, shopping has never been this easy, so dive in and start browsing now!</p>
     </div>
-    <div class="radioHolder">
-        <div class="innerRadio">
+    <div class="radio-holder">
+        <div class="inner-radio">
             <input type="radio" name="select" id="gadgets" class="radio-custom">
             <label for="gadgets" (click)="checkDisplay(1)">Gadgets</label>
         </div>
-        <div class="innerRadio">
+        <div class="inner-radio">
             <input  type="radio" name="select" id="beauty" class="radio-custom">
             <label for="beauty" (click)="checkDisplay(2)" >Beauty</label>
         </div>
-        <div class="innerRadio">
+        <div class="inner-radio">
             <input  type="radio" name="select" id="groceries" class="radio-custom">
             <label for="groceries" (click)="checkDisplay(3)">Groceries</label>
         </div>
-        <div class="innerRadio">
+        <div class="inner-radio">
             <input  type="radio" name="select" id="homedeco" class="radio-custom">
             <label for="homedeco" (click)="checkDisplay(4)">Home decor</label>
         </div>
-        <div class="innerRadio">
+        <div class="inner-radio">
             <input  type="radio" name="select" id="womenfashion" class="radio-custom">
             <label for="womenfashion" (click)="checkDisplay(5)">Women's</label>
         </div>
-        <div class="innerRadio">
+        <div class="inner-radio">
             <input  type="radio" name="select" id="mensfashion" class="radio-custom">
             <label for="mensfashion" (click)="checkDisplay(6)">Men's</label>
         </div>
-        <div class="innerRadio">
+        <div class="inner-radio">
             <input  type="radio" name="select" id="sunglasses" class="radio-custom">
             <label for="sunglasses" (click)="checkDisplay(7)">Sunglasses</label>
         </div>
-        <div class="innerRadio">
+        <div class="inner-radio">
             <input  type="radio" name="select" id="all" class="radio-custom">
             <label for="all" (click)="checkDisplay(8)">All Products</label>
         </div>
     </div>
-    <div class="productTitle container">
+    <div class="product-title container">
         <h2>Browse all of our products:</h2>
     </div>
 
     <div class="products container">
-        <div class="productCollections" *ngFor="let x of this.toBeDisplayed">
+        <div class="product-collections" *ngFor="let x of this.toBeDisplayed">
             <img src={{x.thumbnail}} alt={{x.title}}>
-            <div class="fadedInformation">
+            <div class="faded-information">
                 <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
                 <p class="money">{{x.price}} EUR</p>
                 <h4>{{x.rating}}<span><mat-icon>star</mat-icon></span></h4>

@@ -206,3 +206,31 @@ a:hover{
 
     box-shadow: 0 0 0 0;
 }
+
+
+@media(max-width: 1300px){
+
+    .signup-center{
+
+        min-height: 90%;
+        display: block;
+    }
+
+    .image-container{
+
+        display: none;
+    }
+
+    .signup-centered{
+
+        height: 60%;
+    }
+}
+
+@media(max-width: 750px){
+
+    .signup-center{
+
+        width: 80%;
+    }
+}
