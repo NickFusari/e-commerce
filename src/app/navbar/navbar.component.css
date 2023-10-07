@@ -4,6 +4,11 @@
     height: 7vh;
 }
 
+input{
+
+    display: none;
+}
+
 span{
 
     vertical-align: middle;
@@ -19,7 +24,8 @@ span{
     color: var(--orange);
 }
 
-.container>div>a{
+.container>div>div>a,
+.container>div>label{
 
     color: white;
     text-decoration: none;
@@ -27,7 +33,7 @@ span{
     transition: all 0.3s ease;
 }
 
-.container>div>a:hover{
+.container>div>div>a:hover{
 
     color: var(--orange);
 }
@@ -35,17 +41,64 @@ span{
 .menu{
 
     display: none;
+    z-index: 20;
+}
+
+.menu label mat-icon{
+    cursor: pointer;
 }
 
 @media(max-width: 1300px){
 
-    .primary, .secondary{
+    input:checked ~ .responsive-nav{
 
-        display: none;
+        width: 30%;
+    }
+
+    .responsive-nav{
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 15;
+        height: 100vh;
+        width: 0;
+        overflow: hidden;
+        background: var(--dark);
+        transition: all 0.3s ease;
+    }
+
+    .responsive-nav,
+    .primary,
+    .secondary{
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .primary{
+
+        height: 20vh;
+        margin-top: 6rem;
+    }
+
+    .secondary{
+
+        height: 10vh;
+        margin-bottom: 2rem;
     }
 
     .menu{
 
         display: block;
+    }
+}
+
+@media(max-width: 750px){
+
+    input:checked ~ .responsive-nav{
+
+        width: 50%;
     }
 }

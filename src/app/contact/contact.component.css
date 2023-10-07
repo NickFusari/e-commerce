@@ -7,7 +7,7 @@
 
 .container>img{
 
-    width: 650px;
+    max-width: 650px;
     border-radius: 90px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -51,4 +51,25 @@
         left: 0;
         top: 0;
         position: absolute;
+}
+
+@media(max-width: 1300px){
+
+    .container{
+
+        padding: 0 2rem;
+    }
+}
+
+@media(max-width: 1100px){
+
+    .container>img{
+
+        display: none;
+    }
+
+    .contact-info{
+
+        margin-left: 0;
+    }
 }

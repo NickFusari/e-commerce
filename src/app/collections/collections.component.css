@@ -39,7 +39,7 @@
     text-decoration-thickness: 5px;
 }
 
-.product-holder-collections{
+.product-holder-collections, .scroll{
     
     display: flex;
     margin: 2rem 0;
@@ -52,6 +52,13 @@
     align-items: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+
+.scroll{
+
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .product-collections{
@@ -148,4 +155,49 @@ mat-icon{
 .transfer:hover{
 
     background: linear-gradient(-90deg, rgb(70, 70, 70) 40%, rgba(0, 0, 0, 0));
+}
+
+@media(max-width:1300px){
+
+    .container, .container-sec{
+
+        padding: 0 2rem;
+    }
+
+    .scroll{
+
+        overflow-x: auto;
+    }
+
+
+    .scroll::-webkit-scrollbar{
+
+        height: 0;
+    }
+}
+
+@media(max-width:750px){
+
+    .container, .container-sec{
+
+        padding: 0 1rem;
+    }
+
+    .transfer{
+
+        width: 80px;
+    }
+
+    .transfer p{
+
+        font-size: 12px;
+        margin-right: 0;
+    }
+
+    .transfer>mat-icon{
+
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+    }
 }

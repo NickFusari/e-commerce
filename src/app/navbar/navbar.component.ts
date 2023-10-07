@@ -8,5 +8,20 @@ import { ProfilemanagementService } from '../profilemanagement.service';
 })
 export class NavbarComponent {
 
+  scrollablePage: boolean = true;
+
   constructor(public usermanagement: ProfilemanagementService){}
+
+  menuOpen(){
+
+    this.scrollablePage = this.scrollablePage ? this.scrollablePage = false : this.scrollablePage = true;
+
+    if(!this.scrollablePage){
+
+      this.usermanagement.lockScreen();
+    }else{
+
+      window.onscroll = function(){};
+    }
+  }
 }

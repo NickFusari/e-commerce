@@ -10,13 +10,15 @@
         <h2>Gadgets:</h2>
         <p>Welcome to our Gadgets Section, where innovation meets convenience, and tech enthusiasts find their paradise! Dive into a world of the latest and greatest gadgets that are bound to ignite your curiosity and simplify your life.</p>
         <div class="product-holder-collections">
-            <div class="product-collections" *ngFor="let x of this.service.gadgets">
-                <img src={{x.thumbnail}} alt={{x.title}}>
-                <div class="faded-information">
-                    <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
-                    <p class="money">{{x.price}} EUR</p>
-                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
-                </div>    
+            <div class="scroll">
+                <div class="product-collections" *ngFor="let x of this.service.gadgets">
+                    <img src={{x.thumbnail}} alt={{x.title}}>
+                    <div class="faded-information">
+                        <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                        <p class="money">{{x.price}} EUR</p>
+                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                    </div>    
+                </div>
             </div>
             <div class="transfer" (click)="this.service.fetchMore(this.service.gadgets)">
                 <p>Show more</p>
@@ -28,13 +30,15 @@
         <h2>Beauty:</h2>
         <p>Welcome to our Beauty Section, your personal sanctuary for all things glamorous and transformative! Dive into a world where skincare, makeup, and self-care combine to enhance your natural beauty and boost your confidence.</p>
         <div class="product-holder-collections">
-            <div class="product-collections" *ngFor="let x of this.service.beauty">
-                <img src={{x.thumbnail}} alt={{x.title}}>
-                <div class="faded-information">
-                    <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
-                    <p class="money">{{x.price}} EUR</p>
-                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
-                </div>    
+            <div class="scroll">
+                <div class="product-collections" *ngFor="let x of this.service.beauty">
+                    <img src={{x.thumbnail}} alt={{x.title}}>
+                    <div class="faded-information">
+                        <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                        <p class="money">{{x.price}} EUR</p>
+                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                    </div>    
+                </div>
             </div>
             <div class="transfer" (click)="this.service.fetchMore(this.service.beauty)">
                 <p>Show more</p>
@@ -47,13 +51,15 @@
             <h2>Groceries:</h2>
             <p>Welcome to our Grocery Section, where deliciousness meets convenience! Step into a world of culinary wonders, where you can fill your cart with fresh, flavorful ingredients and pantry essentials to create mouthwatering meals.</p>
             <div class="product-holder-collections">
-                <div class="product-collections" *ngFor="let x of this.service.groceries">
-                    <img src={{x.thumbnail}} alt={{x.title}}>
-                    <div class="faded-information">
-                        <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
-                        <p class="money">{{x.price}} EUR</p>
-                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
-                    </div>    
+                <div class="scroll">
+                    <div class="product-collections" *ngFor="let x of this.service.groceries">
+                        <img src={{x.thumbnail}} alt={{x.title}}>
+                        <div class="faded-information">
+                            <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                            <p class="money">{{x.price}} EUR</p>
+                            <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                        </div>    
+                    </div>
                 </div>
                 <div class="transfer" (click)="this.service.fetchMore(this.service.groceries)">
                     <p>Show more</p>
@@ -66,13 +72,15 @@
         <h2>Home Decorations:</h2>
         <p>Welcome to our Home Decorations Section, where creativity meets comfort, and your living space transforms into a haven of beauty and personality. Explore an exquisite collection of decor items that will breathe life into every corner of your home.</p>
         <div class="product-holder-collections">
-            <div class="product-collections" *ngFor="let x of this.service.homedeco">
-                <img src={{x.thumbnail}} alt={{x.title}}>
-                <div class="faded-information">
-                    <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
-                    <p class="money">{{x.price}} EUR</p>
-                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
-                </div>    
+            <div class="scroll">
+                <div class="product-collections" *ngFor="let x of this.service.homedeco">
+                    <img src={{x.thumbnail}} alt={{x.title}}>
+                    <div class="faded-information">
+                        <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                        <p class="money">{{x.price}} EUR</p>
+                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                    </div>    
+                </div>
             </div>
             <div class="transfer" (click)="this.service.fetchMore(this.service.homedeco)">
                 <p>Show more</p>
@@ -84,13 +92,15 @@
         <h2>Women's wear:</h2>
         <p>Step into the world of fashion with our Women's Wear Section, where elegance meets expression, and every outfit is an opportunity to showcase your unique style. Explore a diverse collection of clothing that empowers you to look and feel your best.</p>
         <div class="product-holder-collections">
-            <div class="product-collections" *ngFor="let x of this.service.womens">
-                <img src={{x.thumbnail}} alt={{x.title}}>
-                <div class="faded-information">
-                    <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
-                    <p class="money">{{x.price}} EUR</p>
-                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
-                </div>    
+            <div class="scroll">
+                <div class="product-collections" *ngFor="let x of this.service.womens">
+                    <img src={{x.thumbnail}} alt={{x.title}}>
+                    <div class="faded-information">
+                        <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                        <p class="money">{{x.price}} EUR</p>
+                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                    </div>    
+                </div>
             </div>
             <div class="transfer" (click)="this.service.fetchMore(this.service.womens)">
                 <p>Show more</p>
@@ -103,13 +113,15 @@
             <h2>Men's Wear:</h2>
             <p>Welcome to our Men's Wear Section, where sophistication meets comfort, and every garment is a statement of your personal style. Explore a curated collection of clothing that empowers you to look sharp and confident. </p>
             <div class="product-holder-collections">
-                <div class="product-collections" *ngFor="let x of this.service.mens">
-                    <img src={{x.thumbnail}} alt={{x.title}}>
-                    <div class="faded-information">
-                        <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
-                        <p class="money">{{x.price}} EUR</p>
-                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
-                    </div>    
+                <div class="scroll">
+                    <div class="product-collections" *ngFor="let x of this.service.mens">
+                        <img src={{x.thumbnail}} alt={{x.title}}>
+                        <div class="faded-information">
+                            <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                            <p class="money">{{x.price}} EUR</p>
+                            <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                        </div>    
+                    </div>
                 </div>
                 <div class="transfer" (click)="this.service.fetchMore(this.service.mens)">
                     <p>Show more</p>
@@ -122,13 +134,15 @@
         <h2>Sunglasses:</h2>
         <p>Welcome to our Sunglasses Section, where fashion meets function, and your eyes stay cool and protected with a dash of glamour. Explore a captivating collection of sunglasses that elevate your look and shield your peepers from the sun's rays.</p>
         <div class="product-holder-collections">
-            <div class="product-collections" *ngFor="let x of this.service.sunglasses">
-                <img src={{x.thumbnail}} alt={{x.title}}>
-                <div class="faded-information">
-                    <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
-                    <p class="money">{{x.price}} EUR</p>
-                    <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
-                </div>    
+            <div class="scroll">
+                <div class="product-collections" *ngFor="let x of this.service.sunglasses">
+                    <img src={{x.thumbnail}} alt={{x.title}}>
+                    <div class="faded-information">
+                        <h2 (click)="this.service.openProduct(x)">{{x.title}}</h2>
+                        <p class="money">{{x.price}} EUR</p>
+                        <p>{{x.rating}}<span><mat-icon>star</mat-icon></span></p>
+                    </div>    
+                </div>
             </div>
             <div class="transfer" (click)="this.service.fetchMore(this.service.sunglasses)">
                 <p>Show more</p>

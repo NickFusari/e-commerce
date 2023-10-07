@@ -215,3 +215,66 @@ mat-icon{
     border-radius: 8px;
     border: 1px solid rgb(0, 255, 0);
 }
+
+@media(max-width: 1300px){
+
+    .fullcontainer{
+
+        padding: 3rem 0 6rem 0;
+    }
+
+    .container{
+
+        padding: 0 2rem;
+    }
+
+    .devider{
+
+        display: block;
+        width: 100%;
+    }
+
+    .carousel img{
+
+        width: 100%;
+    }
+}
+
+@media(max-width: 1060px){
+
+    .other-products{
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 750px){
+
+    .other-products{
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .info{
+
+        padding: 0;
+    }
+
+    .info select{
+
+        width: 100%;
+    }
+
+    .confirm-message{
+
+        width: 300px;
+    }
+}
+
+@media(max-width: 400px){
+
+    .product-collections{
+
+        margin: 0 0 2rem 0;
+    }
+}
